@@ -8,7 +8,6 @@ We hope we can add more in the future.
 
 Bruce Li
 
-
 creator of Rupture
 
 
