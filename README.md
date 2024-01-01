@@ -7,7 +7,10 @@ Rupture is a collection of shortcuts, ranging from easier windows to file readin
 We hope we can add more in the future.
 
 Bruce Li
- creator of Rupture
+creator of Rupture
+
+
+
 Run Rupture:
 Download the entire project except venv folder
 put it in the same directory as your project
