@@ -7,6 +7,8 @@ Rupture is a collection of shortcuts, ranging from easier windows to file readin
 We hope we can add more in the future.
 
 Bruce Li
+
+
 creator of Rupture
 
 
