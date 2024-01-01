@@ -7,7 +7,8 @@ turtle = turtle
 
 class Rupture:
     def __init__(self):
-        self.turtle = turtle
+        self.turtle = turtle.Turtle()
+        self.screen = turtle.Screen()
         self.key_bindings = {}
         self.game_running = True
 
@@ -46,10 +47,10 @@ class Rupture:
         return
 
     def draw_window(self):
-        self.turtle.Screen()
+        self.screen
 
     def create_brush(self):
-        self.turtle.Turtle()
+        self.turtle = turtle.Turtle()
         return
 
     def brush_left(self, value):
@@ -57,18 +58,19 @@ class Rupture:
         return
 
     def brush_right(self, value):
-        self.turtle.left(value)
-        return
-
-    def brush_forward(self, value):
         self.turtle.right(value)
         return
 
-    def draw_close(self):
-        self.turtle.exitonclick()
+    def brush_forward(self, value):
+        self.turtle.forward(value)
+        return
 
-    def color(self):
-        turtle.color(self)
+    def draw_close(self):
+        self.screen.exitonclick()
+
+    def color(self, color):
+        self.turtle.color(color)
+        return
 
     def draw_speed(self, speed):
         self.turtle.speed(speed)

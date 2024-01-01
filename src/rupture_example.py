@@ -1,9 +1,9 @@
 from src.Rupture import Rupture
-rp = Rupture()
-rp.draw_window()
-rp.create_brush()
-rp.draw_speed(1)
-rp.brush_left(1)
-rp.brush_forward(2000000)
 
-rp.draw_close()
+rupture_instance = Rupture()
+rupture_instance.draw_window()
+rupture_instance.create_brush()
+rupture_instance.color('blue')
+rupture_instance.brush_forward(2000)
+rupture_instance.draw_close()
+rupture_instance.start()
