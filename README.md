@@ -19,3 +19,6 @@ from Rupture import Rupture should be your import line
 rp = Rupture() should be the naming of rupture in your project. Note that you can replace rp with any name you like.
 
  Happy Coding!
+
+ Learn: https://github.com/Bruceli-iscool/Rupture/wiki
+ 
