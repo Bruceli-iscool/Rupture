@@ -8,7 +8,7 @@ import turtle
 turtle = turtle
 
 
-class Rupture:
+class Ruptured:
     def __init__(self):
         self.key_bindings = {}
         self.game_running = True

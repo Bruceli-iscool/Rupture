@@ -1,6 +1,6 @@
-from src.Rupture import Rupture
+from src.Ruptured import Ruptured
 
-rp = Rupture()
+rp = Ruptured()
 x = rp.ask('What\'s your age?')
 rp.convert(x, int)
 rp.write(x)
