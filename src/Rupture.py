@@ -3,7 +3,8 @@ import tkinter as tk
 from tkinter import messagebox
 import turtle
 
-turtle = turtle()
+
+turtle = turtle
 
 
 class Rupture:
@@ -132,5 +133,6 @@ class Rupture:
         entry.pack(pady=10)
         return entry
 
-    def window_popup(self, title, message):
+    def window_popup(title, message):
         messagebox.showinfo(title, message)
+
