@@ -1,5 +1,6 @@
 import random
 import tkinter as tk
+from tkinter import messagebox
 import turtle
 
 turtle = turtle
@@ -7,7 +8,6 @@ turtle = turtle
 
 class Rupture:
     def __init__(self):
-        self.turtle = turtle.Turtle()
         self.screen = turtle.Screen()
         self.key_bindings = {}
         self.game_running = True
@@ -65,6 +65,10 @@ class Rupture:
         self.turtle.forward(value)
         return
 
+    def brush_backward(self, value):
+        self.turtle.forward(value)
+        return
+
     def draw_close(self):
         self.screen.exitonclick()
 
@@ -74,6 +78,9 @@ class Rupture:
 
     def draw_speed(self, speed):
         self.turtle.speed(speed)
+
+    def key_bind(self, key, callback):
+        self.key_bindings[key] = callback
 
     def pressed_key(self, event):
         key = event.char.lower()
@@ -85,3 +92,46 @@ class Rupture:
 
     def window(self):
         self.window = tk.Tk()
+
+    def hide_brush(self):
+        self.turtle.hideturtle()
+
+    def set_position(self, x, y):
+        self.turtle.goto(x, y)
+
+    def brush_up(self):
+        self.turtle.penup()
+
+    def brush_down(self):
+        self.turtle.penup()
+
+    def draw_shape(self, shape):
+        self.turtle.shape(shape)
+
+    def fill_color(self, color):
+        self.turtle.fillcolor(color)
+
+    def draw_dot(self):
+        self.turtle.dot()
+
+    def stamp_brush(self):
+        self.turtle.stamp()
+
+    def draw_finish(self):
+        self.turtle.done()
+
+    def window_background(self, color):
+        self.window.configure(background=color)
+
+    def window_button(self, text, command):
+        button = tk.Button(self.window, text=text, command=command)
+        button.pack(pady=10)
+        return button
+
+    def window_entry(self):
+        entry = tk.Entry(self.window)
+        entry.pack(pady=10)
+        return entry
+
+    def window_popup(self, title, message):
+        messagebox.showinfo(title, message)
