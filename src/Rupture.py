@@ -3,7 +3,7 @@ import tkinter as tk
 from tkinter import messagebox
 import turtle
 
-turtle = turtle
+turtle = turtle()
 
 
 class Rupture:
