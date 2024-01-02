@@ -8,15 +8,11 @@ We hope we can add more in the future.
 
 Bruce Li
 
-creator of Rupture
+creator of Ruptured
 
 
 
 Run Rupture:
-Download the entire project except venv folder
-put it in the same directory as your project
-from Rupture import Rupture should be your import line
-rp = Rupture() should be the naming of rupture in your project. Note that you can replace rp with any name you like.
 
  Happy Coding!
 
