@@ -1,3 +1,4 @@
+import sys
 import random
 import tkinter as tk
 from tkinter import messagebox
@@ -320,12 +321,24 @@ class Rupture:
                     self.sprites.remove(item)
                     self.spawn_items()
 
-    def spawn_items(self, item_type, num_items, x_range, y_range):
-        for _ in range(num_items):
-            x_position = random.randint(x_range[0], x_range[1])
-            y_position = random.randint(y_range[0], y_range[1])
-            item = self.brush_character(item_type, x_position, y_position)
-            self.sprites.append(item)
+    def window_keepinscreen(self, sprite):
+        x, y = sprite.position()
+        screen_width = self.screen.window_width() / 2
+        screen_height = self.screen.window_height() / 2
+        new_x = max(-screen_width, min(x, screen_width))
+        new_y = max(-screen_height, min(y, screen_height))
+        sprite.goto(new_x, new_y)
 
-    
-            
+    def follow_sprite(self, follower, target, speed):
+        follower.setheading(follower.towards(target))
+        follower.forward(speed)   
+
+    def end(self):
+       self.game_running = False
+       sys.exit()
+
+    def window_end(self):
+        self.game_running = False
+        self.screen.bye()
+
+
