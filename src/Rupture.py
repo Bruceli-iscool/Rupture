@@ -42,6 +42,22 @@ class Rupture:
     def start(self):
         self.window.mainloop()
 
+    def key_selceted(self, key, callback, sprite):
+        if sprite is not None:
+           self.key_bindings[key] = (sprite, callback)
+        else:
+            self.key_bindings[key] = callback 
+
+    def key_down(self, event):
+        key = event.char.lower()
+        if key in self.key_bindings:
+            callback = self.key_bindings[key]
+            callback()
+        elif key in self.key_bindings:
+            callback - self.key_bindings
+            callback()
+        else:
+            print(f"Unknown key pressed: {key}")
     def size(self, value):
         length = len(value)
         return length
@@ -79,23 +95,6 @@ class Rupture:
 
     def draw_speed(self, speed):
         self.turtle.speed(speed)
-
-    def key_selceted(self, key, callback):
-        if sprite is not None:
-           self.key_bindings[key] = (sprite, callback)
-        else:
-            self.key_bindings[key] = callback 
-
-    def key_down(self, event):
-        key = event.char.lower()
-        if key in self.key_bindings:
-            callback = self.key_bindings[key]
-            callback()
-        elif key in self.key_bindings:
-            callback - self.key_bindings
-            callback()
-        else:
-            print(f"Unknown key pressed: {key}")
 
     def window(self):
         self.window = tk.Tk()
@@ -275,12 +274,13 @@ class Rupture:
         else:
             print('\033Error: Brush not found\033')
 
-    def brush_character(self, filename, x=0, y=0):
+    def brush_character(self, filename, x=0, y=0,):
         sprite = turtle.Turtle()
         sprite.penup()
         sprite.shape(filename)
         sprite.goto(x, y)
         self.sprites.append(sprite)
+
         return sprite
     
     def relocate_character(self, sprite, dx, dy):
@@ -310,3 +310,22 @@ class Rupture:
 
     def character_right(self, sprite):
         self.relocate_character(sprite, 10, 0)
+
+    def detect_collision(self, sprite_type, callback):
+        player = next((sprite for sprite in self.sprites if sprite.shape() == "turtle"), None)
+        if player:
+            for item in self.sprites:
+                if item.shape() == sprite_type and self.is_collision(player, item):
+                    callback(item)
+                    self.sprites.remove(item)
+                    self.spawn_items()
+
+    def spawn_items(self, item_type, num_items, x_range, y_range):
+        for _ in range(num_items):
+            x_position = random.randint(x_range[0], x_range[1])
+            y_position = random.randint(y_range[0], y_range[1])
+            item = self.brush_character(item_type, x_position, y_position)
+            self.sprites.append(item)
+
+    
+            
