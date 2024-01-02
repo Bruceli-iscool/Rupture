@@ -11,6 +11,7 @@ class Rupture:
     def __init__(self):
         self.key_bindings = {}
         self.game_running = True
+        self.sprites = []
 
     def write(self, value):
         print(value)
@@ -79,13 +80,19 @@ class Rupture:
     def draw_speed(self, speed):
         self.turtle.speed(speed)
 
-    def key_bind(self, key, callback):
-        self.key_bindings[key] = callback
+    def key_selceted(self, key, callback):
+        if sprite is not None:
+           self.key_bindings[key] = (sprite, callback)
+        else:
+            self.key_bindings[key] = callback 
 
-    def pressed_key(self, event):
+    def key_down(self, event):
         key = event.char.lower()
         if key in self.key_bindings:
             callback = self.key_bindings[key]
+            callback()
+        elif key in self.key_bindings:
+            callback - self.key_bindings
             callback()
         else:
             print(f"Unknown key pressed: {key}")
@@ -267,3 +274,39 @@ class Rupture:
             self.turtle.end_fill()
         else:
             print('\033Error: Brush not found\033')
+
+    def brush_character(self, filename, x=0, y=0):
+        sprite = turtle.Turtle()
+        sprite.penup()
+        sprite.shape(filename)
+        sprite.goto(x, y)
+        self.sprites.append(sprite)
+        return sprite
+    
+    def relocate_character(self, sprite, dx, dy):
+        x, y = sprite.position()
+        sprite.setposition(x + dx, y + dy)
+
+    def hide_character(self, sprite):
+        sprite.hideturtle()
+
+    def show_character(self, sprite):
+        sprite.showturtle()
+    
+    def character_collision(self, sprite1, sprite2):
+        x1, y1 = sprite1.position()
+        x2, y2 = sprite2.position()
+        distance = ((x1 - x2) ** 2 + (y1 - y2) ** 2) ** 0.5
+        return distance < 20 
+    
+    def character_up(self, sprite):
+        self.relocate_charactera(sprite, 0, 10)
+
+    def character_down(self, sprite):
+        self.relocate_character(sprite, 0, -10)
+
+    def character_left(self, sprite):
+        self.relocate_character(sprite, -10, 0)
+
+    def character_right(self, sprite):
+        self.relocate_character(sprite, 10, 0)
