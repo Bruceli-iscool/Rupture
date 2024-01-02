@@ -8,17 +8,15 @@ turtle = turtle
 
 class Rupture:
     def __init__(self):
-        self.screen = turtle.Screen()
         self.key_bindings = {}
         self.game_running = True
 
     def write(self, value):
         print(value)
-        return value
 
     def ask(self, value):
-        input(value)
-        return value
+        user = input(value)
+        return user
 
     def rad(self, value):
         return random.randint(0, value)
@@ -43,10 +41,11 @@ class Rupture:
         self.window.mainloop()
 
     def size(self, value):
-        self.len(value)
-        return
+        length = len(value)
+        return length
 
     def draw_window(self):
+        self.screen = turtle.Screen()
         self.screen
 
     def create_brush(self):
@@ -135,5 +134,3 @@ class Rupture:
 
     def window_popup(self, title, message):
         messagebox.showinfo(title, message)
-
-

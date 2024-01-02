@@ -1,4 +1,5 @@
 from src.Rupture import Rupture
 
 rp = Rupture()
-rp.ask('your')
+x = rp.ask('steve')
+rp.write(x)
