@@ -12,13 +12,13 @@ class Rupture:
         self.key_bindings = {}
         self.game_running = True
 
-    def write(self):
-        print(self)
-        return
+    def write(self, value):
+        print(value)
+        return value
 
-    def ask(self):
-        user_input = input(self)
-        return user_input
+    def ask(self, value):
+        input(value)
+        return value
 
     def rad(self, value):
         return random.randint(0, value)
@@ -42,8 +42,8 @@ class Rupture:
     def start(self):
         self.window.mainloop()
 
-    def size(self):
-        len(self)
+    def size(self, value):
+        self.len(value)
         return
 
     def draw_window(self):
@@ -135,3 +135,5 @@ class Rupture:
 
     def window_popup(self, title, message):
         messagebox.showinfo(title, message)
+
+
