@@ -13,7 +13,10 @@ creator of Ruptured
 
 
 Install Ruptured:
-pip install ruptured
+       
+       pip install ruptured
+ 
+ 
  Happy Coding!
 
  Learn: https://github.com/Bruceli-iscool/Ruptured/wiki
