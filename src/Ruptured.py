@@ -353,7 +353,7 @@ class Ruptured:
     def pause(self, sec):
         time.sleep(sec)
 
-    def launch_projectile(self, x, y, heading, speed, shape):
+    def draw_projectile(self, x, y, heading, speed, shape):
         projectile = turtle.Turtle()
         projectile.penup()
         projectile.goto(x, y)
