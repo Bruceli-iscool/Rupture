@@ -6,18 +6,11 @@ It uses python syntax and python code.
 Ruptured is a collection of shortcuts, ranging from easier windows to file reading.
 We hope we can add more in the future.
 
-Bruce Li
-
-creator of Ruptured
-
 
 
 Install Ruptured:
        
        pip install ruptured
  
- 
- Happy Coding!
-
  Learn: https://github.com/Bruceli-iscool/Ruptured/wiki
  
