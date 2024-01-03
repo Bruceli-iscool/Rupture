@@ -353,6 +353,22 @@ class Ruptured:
     def pause(self, sec):
         time.sleep(sec)
 
+    def launch_projectile(self, x, y, heading, speed, shape):
+        projectile = turtle.Turtle()
+        projectile.penup()
+        projectile.goto(x, y)
+        projectile.setheading(heading)
+        projectile.speed(speed)
+        projectile.shape(shape)
+
+        return projectile
+
+    def move_projectile(self, projectile, distance):
+        projectile.forward(distance)
+
+    def destroy_projectile(self, projectile):
+        projectile.hideturtle()
+
 
 class Math:
     """"A classs to do math operations"""
