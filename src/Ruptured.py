@@ -1,5 +1,7 @@
 import sys
 import random
+from tkinter import *
+from PIL import ImageTk
 import tkinter as tk
 from tkinter import messagebox
 import turtle
@@ -341,4 +343,8 @@ class Ruptured:
         self.game_running = False
         self.screen.bye()
 
+    def window_background(self, image):
+        img = ImageTk.PhotoImage(file=image)
+        label = Label(root, image=img)
+        label.place(x=0, y=0, relwidth=1, relheight=1)
 
