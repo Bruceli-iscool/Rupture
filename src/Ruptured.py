@@ -5,11 +5,7 @@ import time
 import tkinter as tk
 from tkinter import messagebox
 import turtle
-<<<<<<< HEAD
 import math
-=======
-import time
->>>>>>> 9a5003e6ffcdc5026e1d0a19a9adccf2ffc0d6db
 
 
 turtle = turtle
@@ -355,13 +351,7 @@ class Ruptured:
             print(f"Unknown key pressed: {key}")
 
     def pause(self, sec):
-<<<<<<< HEAD
         time.sleep(sec)
-=======
-        time.pause(sec)
-
-
->>>>>>> 9a5003e6ffcdc5026e1d0a19a9adccf2ffc0d6db
 
 
 class Math:
