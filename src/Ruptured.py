@@ -5,6 +5,7 @@ from PIL import ImageTk
 import tkinter as tk
 from tkinter import messagebox
 import turtle
+import time
 
 
 turtle = turtle
@@ -354,6 +355,8 @@ class Ruptured:
             print(f"Unknown key pressed: {key}")
 
     def pause(self, sec):
-        t
+        time.pause(sec)
+
+
 
 
