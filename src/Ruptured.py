@@ -1,16 +1,18 @@
 import sys
 import random
 from tkinter import *
-from PIL import ImageTk
+import time
 import tkinter as tk
 from tkinter import messagebox
 import turtle
+import math
 
 
 turtle = turtle
 
 
 class Ruptured:
+    """A class to store basic Ruptured functions"""
     def __init__(self):
         self.key_bindings = {}
         self.game_running = True
@@ -326,12 +328,7 @@ class Ruptured:
         self.game_running = False
         self.screen.bye()
 
-    def window_picture(self, image):
-        img = ImageTk.PhotoImage(file=image)
-        label = Label(root, image=img)
-        label.place(x=0, y=0, relwidth=1, relheight=1)
-
-    def window_textarea(self, lines):
+    def window_textarea(self, root, lines):
         text = Text(root, height=lines)
         text.pack()
 
@@ -354,6 +351,43 @@ class Ruptured:
             print(f"Unknown key pressed: {key}")
 
     def pause(self, sec):
-        t
+        time.sleep(sec)
 
+
+class Math:
+    """"A classs to do math operations"""
+
+    def add(self, x, z):
+        added_number = x + z
+        return added_number
+    
+    def subtract(self, x, z):
+        subtracted_number = x - z
+        return subtracted_number
+    
+    def multiply(self, x, z):
+        multiplyed_number = x * z
+        return multiplyed_number
+    
+    def divide(self, x, z):
+        if not ZeroDivisionError:
+           divided_number = x / z
+           return divided_number
+        else:
+            print('ZeroDivisionError')
+
+    def square(self, z):
+        squared_number = z**z
+        return squared_number
+    
+    def round(self, z):
+        rounded_number = math.floor(z)
+        return rounded_number
+    
+    
+
+
+
+    
+    
 
