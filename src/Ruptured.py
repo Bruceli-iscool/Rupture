@@ -44,23 +44,6 @@ class Ruptured:
 
     def start(self):
         self.window.mainloop()
-
-    def key_selceted(self, key, callback, sprite):
-        if sprite is not None:
-           self.key_bindings[key] = (sprite, callback)
-        else:
-            self.key_bindings[key] = callback 
-
-    def key_down(self, event):
-        key = event.char.lower()
-        if key in self.key_bindings:
-            callback = self.key_bindings[key]
-            callback()
-        elif key in self.key_bindings:
-            callback - self.key_bindings
-            callback()
-        else:
-            print(f"Unknown key pressed: {key}")
     def size(self, value):
         length = len(value)
         return length
@@ -343,8 +326,34 @@ class Ruptured:
         self.game_running = False
         self.screen.bye()
 
-    def window_background(self, image):
+    def window_picture(self, image):
         img = ImageTk.PhotoImage(file=image)
         label = Label(root, image=img)
         label.place(x=0, y=0, relwidth=1, relheight=1)
+
+    def window_textarea(self, lines):
+        text = Text(root, height=lines)
+        text.pack()
+
+    def key_selceted(self, key, callback, sprite):
+        if sprite is not None:
+           self.key_bindings[key] = (sprite, callback)
+        else:
+            self.key_bindings[key] = callback
+
+    def key_down(self, event):
+        global callback
+        key = event.char.lower()
+        if key in self.key_bindings:
+            callback = self.key_bindings[key]
+            callback()
+        elif key in self.key_bindings:
+            callback - self.key_bindings
+            callback()
+        else:
+            print(f"Unknown key pressed: {key}")
+
+    def pause(self, sec):
+        t
+
 
