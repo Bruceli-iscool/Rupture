@@ -12,8 +12,5 @@ Install Ruptured:
        
        pip install ruptured
  
- 
- Happy Coding!
-
  Learn: https://github.com/Bruceli-iscool/Ruptured/wiki
  
