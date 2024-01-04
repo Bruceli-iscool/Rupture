@@ -363,12 +363,13 @@ class Ruptured:
 
         return projectile
 
-    def move_projectile(self, projectile, distance):
+    def start_projectile(self, projectile, distance):
         projectile.forward(distance)
 
     def destroy_projectile(self, projectile):
         projectile.hideturtle()
 
+    
 
 class Math:
     """"A classs to do math operations"""
@@ -400,8 +401,9 @@ class Math:
         rounded_number = math.floor(z)
         return rounded_number
     
-    
-
+    def pi(self):
+        pi = math.pi
+        return pi
 
 
     
