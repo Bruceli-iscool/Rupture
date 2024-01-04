@@ -369,7 +369,8 @@ class Ruptured:
     def destroy_projectile(self, projectile):
         projectile.hideturtle()
 
-    
+    def brush_write(self, word, font):
+        self.write(word, font)
 
 class Math:
     """"A classs to do math operations"""
