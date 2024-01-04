@@ -381,7 +381,28 @@ class Ruptured:
     
     def brush_findkey(self):
         self.listen()
-        
+
+    def create_score(self):
+        score = 0
+        return score
+    
+    def score_zero(self):
+        score = 0 
+        return score
+    
+    def score_change(self):
+        score = score + 1
+        return score
+    
+    def create_timer(self, sec):
+        pass
+
+    def on_score(self, value, score):
+        if  score == value:
+            pass
+        else:
+            pass
+           
 
 class Math:
     """"A classs to do math operations"""
