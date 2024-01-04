@@ -372,6 +372,9 @@ class Ruptured:
     def brush_write(self, word, font):
         self.write(word, font)
 
+    def brush_key(self, function, key):
+        self.onkey(function, key)
+
 class Math:
     """"A classs to do math operations"""
 
