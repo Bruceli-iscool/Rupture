@@ -375,6 +375,10 @@ class Ruptured:
     def brush_key(self, function, key):
         self.onkey(function, key)
 
+    def brush_name(self, name):
+        self.title(name)
+        return
+
 class Math:
     """"A classs to do math operations"""
 
