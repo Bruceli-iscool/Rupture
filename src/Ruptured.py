@@ -378,6 +378,10 @@ class Ruptured:
     def brush_name(self, name):
         self.title(name)
         return
+    
+    def brush_findkey(self):
+        self.listen()
+        
 
 class Math:
     """"A classs to do math operations"""
