@@ -1,4 +1,4 @@
-from src.Ruptured import Ruptured
+from Ruptured import Ruptured
 
 rp = Ruptured()
 rp.draw_window
