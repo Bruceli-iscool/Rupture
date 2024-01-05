@@ -1,6 +1,5 @@
 import sys
 import random
-from tkinter import *
 import time
 import tkinter as tk
 from tkinter import messagebox
@@ -113,8 +112,6 @@ class Ruptured:
     def stamp_brush(self):
         self.turtle.stamp()
 
-    def draw_finish(self):
-        self.turtle.done()
 
     def window_background(self, color):
         self.window.configure(background=color)
@@ -423,8 +420,8 @@ class Math:
     
     def divide(self, x, z):
         if not ZeroDivisionError:
-           divided_number = x / z
-           return divided_number
+            divided_number = x / z
+            return divided_number
         else:
             print('ZeroDivisionError')
 
