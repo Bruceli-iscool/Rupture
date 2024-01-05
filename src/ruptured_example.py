@@ -3,7 +3,7 @@ from Ruptured import Ruptured
 rp = Ruptured()
 rp.draw_window
 rp.create_brush
-rp.brush_name('ArtBoard')
+
 def moveup():
     rp.brush_up(20)
 
