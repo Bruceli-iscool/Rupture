@@ -19,7 +19,9 @@ class Ruptured:
         self.sprites = []
 
     def write(self, value):
-        print(value)
+        z = value
+        print(z)
+        return
 
     def ask(self, value):
         user = input(value)
@@ -432,12 +434,13 @@ class Math:
     
     def round(self, z):
         rounded_number = math.floor(z)
-        return rounded_number
+        return math.floor(z)
     
     def pi(self):
         pi = math.pi
         return pi
 
+    
 
     
     
