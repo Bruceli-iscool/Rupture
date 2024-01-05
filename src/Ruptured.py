@@ -16,6 +16,7 @@ class Ruptured:
         self.key_bindings = {}
         self.game_running = True
         self.sprites = []
+        self = turtle
 
     def write(self, value):
         z = value
