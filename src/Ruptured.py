@@ -7,7 +7,7 @@ import turtle
 import math
 
 
-turtle = turtle
+tur = turtle
 
 
 class Ruptured:
@@ -16,7 +16,7 @@ class Ruptured:
         self.key_bindings = {}
         self.game_running = True
         self.sprites = []
-        self = turtle
+        self = tur
 
     def write(self, value):
         z = value
